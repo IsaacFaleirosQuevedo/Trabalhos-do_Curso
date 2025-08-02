@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 50px;
+}
+
+
+p{
+  font-size: 18px;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #656363;
+}
+
+.active {
+  background-color: #ff0000;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header1{
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 30px;
+  margin-left: 0;
+  padding-left: 20%;
+}
+
+.headerimg{ 
+  display: flex;
+  margin-left: 5%;
+}
+
+.borda{
+  border-radius: 12px;
+}
+
+/* Texto descendo em imagem */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.imagem {
+  display: block;
+  width: 200%;
+  height: 450px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 85%;
+  left: 0;
+  right: 0;
+  background-color: #9b1212;
+  overflow: hidden;
+  width: 200%;
+  height: 15%;
+  transition: .7s ease;
+}
+
+.container:hover .overlay .text{
+  top: 55%;
+  transition: .7s;
+}
+
+.container:hover .overlay .top{
+  top: 7%;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: -1000%;
+  left: 50%;
+  width: 99%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: 2s ease;
+}
+
+.row{
+  display: flex;
+}
+
+.row p{
+  margin: 15px;
+  width: 20%;
+  height: 50%;
+}
+
+.top{
+  font-weight: 900;
+  top: 50%;
+  z-index: 4;
+}
+
+#corpo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#corpo a{
+  width: 50%;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  padding: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.grid div{
+  display: flex;
+  align-self: center;
+}
+
+.grid div p{
+  font-size: 30px;
+}
+
+/* infos */
+.card{
+  width: 10%;
+  padding: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.flex{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* FOOTER */
+
+footer{
+  text-align: center;
+  color: white;
+  background: #222222;
+  padding: 30px 0;
+  margin-top: 20px;
+}
+
+footer #redes-sociais{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer #redes-sociais .rede{
+  position: relative;
+  transition: 0.5s;
+}
+
+.rede ~ img{
+  width: 150%;
+  height: 150%;
+}
+
+.rede:hover img{
+  opacity: 0;
+}
+
+.rede:hover .vermelho img{
+  opacity: 100;
+}
+
+footer #redes-sociais .rede img:hover ~ .vermelho img{
+  opacity: 100%;
+}
+
+footer .rede .vermelho{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer .rede .vermelho img{
+  transition: 0.5s;
+  opacity: 0;
+}
